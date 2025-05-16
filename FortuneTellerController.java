@@ -43,8 +43,6 @@ public class HelloController {
     @FXML
     ListView<String> fortuneList = new ListView<String>();
     ObservableList<String> items = FXCollections.observableArrayList(fortunes);
-    @FXML
-    int number_of_fortunes = 10;
 
 
 
@@ -118,7 +116,6 @@ public class HelloController {
             fortunes.add(fortune);
             onAddFortuneToList();
             fortuneList.setItems(items);
-            number_of_fortunes += 1;
         }
     }
 
@@ -141,7 +138,6 @@ public class HelloController {
             fortunes.remove(fortuneList.getSelectionModel().getSelectedItem());
             items.setAll(fortunes);
             fortuneList.setItems(items);
-            number_of_fortunes -= 1;
 
         } catch (Exception e) {
             throw new RuntimeException(e);
