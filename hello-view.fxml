@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" prefHeight="378.0" prefWidth="519.0" spacing="20.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fortuneteller.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Click Display Fortunes to start. Click Generate Fortune to recevie your own fortune. Click add fortune to add a fortune of your own. After Selecting a Fortune from the list, you can click Remove Fortune to remove it." wrappingWidth="588.2774047851562" />
+   <VBox prefHeight="327.0" prefWidth="499.0">
+      <children>
+          <Button fx:id="addFortune" onAction="#onAddFortuneButtonClick" text="Add Fortune" />
+         <Button fx:id="generateFortune" onAction="#onGenerateFortuneClick" text="Generate Fortune" />
+         <Label fx:id="fortuneLabel" text="Fortune:" />
+         <Label fx:id="fortuneEnter" />
+<!--         <Button fx:id="enterFortune" onAction="#onEnterFortuneClick" text="Enter Fortune" />-->
+         <TextField fx:id="fortuneBox" />
+      
+          <Label fx:id="welcomeText" />
+         <Button fx:id="displayFortunes" onAction="#onDisplayFortunesClick" text="Display Fortunes" />
+         <Button fx:id="removeFortune" onAction="#onRemoveFortuneClick" text="Remove Fortune" />
+         <VBox prefHeight="200.0" prefWidth="100.0">
+            <children>
+               <ListView fx:id="fortuneList" prefHeight="200.0" prefWidth="200.0" />
+            </children>
+         </VBox>
+      </children>
+   </VBox>
+</VBox>
